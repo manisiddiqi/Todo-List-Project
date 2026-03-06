@@ -1,0 +1,110 @@
+/* Yeh hum nay all over file ko cs di hai */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+/* Yahan hum nay container ko background colour aur height aur width aur padding di hai */
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+/* Yahan jo to do box wagera hai us ki css ki hai */
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+/* yahan hum nay to do app main jo heading di hai us ki css ki hai  */
+.todo-app h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+/* Yahan hum nay todo app main jo icon use kiya hai us ki css ki hai */
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+/* Yahan hum nay jo input box jis main hum nay button bhi add kia hai us puray ki css ki hai */
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+/* Yahan hum nay input box ki css ki hai  */
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+/* Yahan input box main jo button hai us ki css ki hai */
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+/* Yahan hum nay list items ki css ki hai */
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+/* Yahan hum nay k=list item say pehlay jo round circle aur us main jo image use ho gi us ki css ki hai  */
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+/* Yahan hum nay jab task complete ho jaye ga tou jo picture aye gi us ki css ki hai */
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+/* Yahan jo hum nay task delete kay span use kia hai us ki css ki hai */
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+li ul span:hover{
+    background: #edeef0;
+}
